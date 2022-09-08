@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 
+
+if [[ $# == 0 ]]; then
+    echo "$( ./jsScript1.js )" 
+    exit
+    fi
+
 for arg
 do
 
