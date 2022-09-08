@@ -7,7 +7,7 @@ const [,, ...args] = process.argv;
 let alen = args.length;
 
 if (alen !== 1) {
-    console.log("please use 'jsScript2.js' [param1|param2|6 5 4 3 2 1]");  
+    console.log("please use 'jsScript2.js' [param1|param2|array]");  
     process.exit()
     } 
 
