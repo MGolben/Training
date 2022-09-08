@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
 for arg
@@ -13,7 +13,7 @@ if [[ $arg == "param1" ]]; then
         continue
     else 
 	    echo "param1 test failed"
-        break
+        exit
     fi
 
 
@@ -24,7 +24,7 @@ elif [[ $arg == "param2" ]]; then
         continue
     else
 	    echo "param2 test failed"
-        break
+        exit
     fi
 
 
@@ -35,15 +35,15 @@ elif [[ $arg == "6 5 4 3 2 1" ]]; then
         continue
     else
     	echo "arr test failed"
-        break
+        exit
     fi
 
 else 
     echo "${arg} is unrecognized. Test failed."
-    break
+    exit
 
 fi
 
-echo "All tests passed."
-
 done
+
+echo "All tests passed."
