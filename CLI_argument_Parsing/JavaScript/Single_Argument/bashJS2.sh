@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-if [[ $# == 0 ]]; then
+if [[ $# != 1 ]]; then
     echo "$( ./jsScript2.js )" 
     exit
     fi

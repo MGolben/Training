@@ -1,0 +1,1 @@
+This is a repository for trainings conducted before work on SciDAP.

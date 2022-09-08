@@ -2,7 +2,7 @@
 
 // "This is a simple Command Line Interface example that evaluates one argument. The argument can be either 'param1' that evaluates to 'something 1' or 'param2' that evaluates to 'something 2'"  
 
-import sort from "./sort.js"
+import sort from "../sort.js"
 const [,, ...args] = process.argv;
 let alen = args.length;
 

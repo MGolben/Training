@@ -6,7 +6,7 @@
 
 
 
-import sort from "./sort.js"
+import sort from "../sort.js"
 
 const [,, ...args] = process.argv
 
