@@ -1,5 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
+# This is a simple Pyhton script that takes multiple arguments and evaluates 
 
 from sort import sort
 import sys 
@@ -7,28 +8,27 @@ import sys
 args = sys.argv[1:]
 
 
-for arg in args:
+if len(args) == 0:
+    print("please use 'PyScript1.py' [param1|param2|array]")
+    exit
 
-    # print(type(arg), arg);
+for arg in args:
 
     if arg == "param1":
         print("something 1")
         continue
     
-    elif arg == "param2":
+    if arg == "param2":
         print("something 2")
         continue
     
-    targ = arg.split(" ");
-
-    if type(targ) == list:
-        if len(targ) > 1:
-            sortedArr = sort(targ)
-            joined = " ".join(sortedArr)
-            print(joined)
-            continue
-        else:
-            print("{this} is unrecognized.".format(this=targ))
+    if arg.find(" ") != -1:
+        targ = arg.split(" ");
+        sortedArr = sort(targ)
+        joined = " ".join(sortedArr)
+        print(joined)
+        continue
 
     else:
-        print("{this} is unrecognized.".format(this=targ))
+        print("{this} is unrecognized.".format(this=arg))
+        break
